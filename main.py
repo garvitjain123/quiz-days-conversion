@@ -130,6 +130,27 @@ class Test(unittest.TestCase):
         
         result = solution(test_date_dic)
         self.assertEqual(result, "ENTRIES FOR MONDAY/SUNDAY NOT AVAILABLE")
-
+        
+        
+    def test_input_given(self):
+        
+        test_date_dic = {
+            "2020-01-01": 4,
+            "2020-01-02": 4,
+            "2020-01-03": 6,
+            "2020-01-04": 8,
+            "2020-01-05": 2,
+            "2020-01-06": -6,
+            "2020-01-07": 2,
+            "2020-01-08": -2,
+        }
+        
+        test_res = {'Mon': -6, 'Thu': 4, 'Wed': 2, 'Tue': 2, 'Fri': 6, 'Sat': 8, 'Sun': 2}
+        
+        result = solution(test_date_dic)
+        for item in result.keys():
+            self.assertEqual(result[item],  test_res[item])
+        
+        
 if __name__ == "__main__":
     unittest.main()
