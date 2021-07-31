@@ -5,6 +5,7 @@ Installation Needed:
     
         1. Python 3.7+
         2. unittest module(available with python-3.7+)
+        3. Collections module(available with python-3.7+)
 
 
 This program takes the input of dates(Entries for the dates representing "Monday" and "Sunday" are essential for code completion) and outputs the days with the associated counter is provided.
